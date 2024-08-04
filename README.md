@@ -23,3 +23,8 @@ What you’ll practice:
 - sharing state across components
 - combining server state with local state
 - working with derived state
+
+## Getting started
+
+Run `npm install` before you start.
+Run `npm start` to run the app.
