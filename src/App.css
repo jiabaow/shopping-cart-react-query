@@ -1,0 +1,25 @@
+.app-container {
+    display: flex;
+    padding: 20px;
+}
+
+.product-list,
+.shopping-cart {
+    flex: 1;
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .app-container {
+        flex-direction: column;
+    }
+}
