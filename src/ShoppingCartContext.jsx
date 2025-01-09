@@ -1,6 +1,6 @@
 import React, {createContext, useContext, useState} from "react";
 
-const ShoppingCartContext = createContext(); // why
+const ShoppingCartContext = createContext();
 
 export const useShoppingCart = () => {
     const context = useContext(ShoppingCartContext);
@@ -58,3 +58,19 @@ export const ShoppingCartProvider = ({ children }) => {
         </ShoppingCartContext.Provider>
     );
 };
+
+/*
+React Context is ideal when you have data that needs to be accessible by many components at different nesting levels. Common use cases include:
+
+    Theming: Providing a theme (light/dark) to all components.
+    Authentication: Managing user login state across the app.
+    Language Localization: Managing the current language settings.
+    Shopping Cart: Managing items added to the cart from various parts of the app.
+    Note: While Context is powerful, it should not be overused. For state that only a few components need, traditional prop drilling might be simpler and more efficient.
+
+    Benefits of Using Context for a Shopping Cart
+
+    Global Accessibility: Allows any component to access or modify the cart without prop drilling.
+    Centralized State Management: Keeps cart state in one place, making it easier to maintain and debug.
+    Scalability: Facilitates scaling your application as you add more components that interact with the cart.
+    Performance Optimization: When used correctly, can help minimize unnecessary re-renders.*/
